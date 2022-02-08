@@ -9,7 +9,7 @@ All the codes of **C++** will be available here.
   Command: `git clone <ssh-link>` or `git clone <https-link>`
 - Change directory to C-Plus-Plus using `cd C-Plus-Plus` and create a branch of your name.
 
-  Command: `git branch branch_name` or `git branch -b branch_name`
+  Command: `git branch branch_name` or `git checkout -b branch_name`
   
 - Then push the branch to the remote repository using the command `git push -u origin <newly_created_branch_name>`
 
