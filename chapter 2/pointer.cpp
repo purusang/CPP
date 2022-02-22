@@ -45,26 +45,24 @@
 
 
 
- Array is also a pointer to a contiguous memory of certain length.
-
-#include <iostream>
-using namespace std;
-int main() {
-	int *ip;
-	int arr[] = { 10, 34, 13, 76, 5, 46 };
-	ip = arr;
-	for (int x = 0; x < 6; x++) {
-		cout << *ip << endl;
-		ip++;
-	}
-	cout<<endl<<endl<<"another way of accession the same array"<<endl;
-	for (int x = 0; x < 6; x++) {
-		cout << arr[x] << endl;
-	}
-	return 0;
-}
-
-
+// Array is also a pointer to a contiguous memory of certain length.
+//
+//#include <iostream>
+//using namespace std;
+//int main() {
+//	int *ip;
+//	int arr[] = { 10, 34, 13, 76, 5, 46, 23 };
+//	ip = arr;
+//	for (int x = 0; x < 7; x++) {
+//		cout << *ip << endl;      // x = 0, *ip => * & arr[0] => arr[0]  // 2nd: *ip => * & arr[1] => arr[1]
+//		ip++;   // ip++ => &arr[0] + 1 integer space => arr[1]           // &arr[1] + 1 int space =>  arr[2]
+//	}
+//	cout<<endl<<endl<<"another way of accession the same array"<<endl;
+//	for (int x = 0; x < 7; x++) {
+//		cout << arr[x] << endl;
+//	}
+//	return 0;
+//}
 
 
 
@@ -74,33 +72,37 @@ int main() {
 
 
 
-// A simple application of pointer when multiple values are expected from a called function.
+
+
+ //A simple application of pointer when multiple values are expected from a called function.
 //#include <iostream>
 //
 //using namespace std;
-//void test(int*, int*);
 //
+//void test(int* n1, int* n2){   // n1 = &a, n2 = &b;
+//	*n1 = 10;   // *n1 => * & a => a
+//	*n2 = 11;   // b = 11
+//}
 //
 //int main() {
 //	int a = 5, b = 5;
 //
+//    int *ip;
+//    ip = &a;
 //	cout << "Before changing:" << endl;
 //	cout << "a = " << a << endl;
 //	cout << "b = " << b << endl;
 //
-//	test(&a, &b);
+//	test(&a, &b);   // pass by reference
 //
 //	cout << "\nAfter changing" << endl;
 //	cout << "a = " << a << endl;
 //	cout << "b = " << b << endl;
 //	return 0;
 //}
-//
-//void test(int* n1, int* n2) {
-//	*n1 = 10;
-//	*n2 = 11;
-//}
-//
+
+
+
 //
 //
 //

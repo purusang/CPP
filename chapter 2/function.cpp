@@ -1,5 +1,5 @@
 //
-//// C++ program to demonstrate the
+//// C++ program to demonstrate the pointer and array relationship
 //// cin object
 //#include <iostream>
 //using namespace std;
@@ -56,7 +56,7 @@
 
 
 
-// Call by Value
+// Pass by Value
 //
 //#include <iostream>
 //using namespace std;
@@ -110,14 +110,33 @@
 //
 //   return 0;
 //}
+//void swap(int &x, int &y){
+//    int temp = x;
+//    x = y;
+//    y = temp;
+//}
 
-// Call by pointer
 
+
+
+
+
+
+
+
+
+//
+// Pass by pointer
+//
 //#include <iostream>
 //using namespace std;
 //
 //// function declaration
-//void swap(int *x, int *y);
+//void swap(int *x, int *y){   // pass by pointer
+//    int temp = *x;
+//    *x = *y;
+//    *y = temp;
+//}
 //
 //int main () {
 //   // local variable declaration:
@@ -127,10 +146,6 @@
 //   cout << "Before swap, value of a :" << a << endl;
 //   cout << "Before swap, value of b :" << b << endl;
 //
-//   /* calling a function to swap the values.
-//      * &a indicates pointer to a ie. address of variable a and
-//      * &b indicates pointer to b ie. address of variable b.
-//   */
 //   swap(&a, &b);
 //
 //   cout << "After swap, value of a :" << a << endl;
@@ -138,3 +153,38 @@
 //
 //   return 0;
 //}
+//
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+////Return by reference
+//#include <iostream>
+//using namespace std;
+//
+//int n;
+//
+//int& test() {  // function will return reference
+//    return a;    //  n variable itself is returned.   n[23434]
+//}
+//
+//int main() {
+//    test() = 5;     // n = 5;  a does not exist
+//    cout<<n;
+//    return 0;
+//}
+//Note: you cannot return local variables or a constant
+
+
+
