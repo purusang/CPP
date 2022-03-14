@@ -8,6 +8,7 @@ class Example {
 public:
 	int a;
     Example(){
+        cout<< "default" <<endl;
         // empty default constructor.
     }
 	Example(const Example& E){
@@ -17,9 +18,11 @@ public:
 
 	// This function will take
 	// an object as an argument
-	void add(Example E)
+	// E1.add(E2);
+	void add(Example E )
 	{
-		a = a + E.a;
+		a = a + E.a; //
+		// E1.a = E1.a + E2.a
 	}
 };
 
@@ -38,10 +41,13 @@ int main()
 	cout << "Value of object 1: " << E1.a
 		<< "\n& object 2: " << E2.a
 		<< "\n\n";
-
+    E2.add(E1);
+        E2.add(E1);
+            E2.add(E1);
+                E2.add(E1);
 	// Passing object as an argument
 	// to function add()
-	E2.add(E1);
+	//E2.add(E1);
 
 	// Changed values after passing
 	// object as argument
