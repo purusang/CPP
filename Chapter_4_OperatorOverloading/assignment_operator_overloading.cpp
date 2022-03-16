@@ -26,6 +26,7 @@ class Distance {
       void operator += (Distance D){
         feet += D.feet;
         inches += D.inches;
+        cout << "+= invoked" ;
       }
 };
 
