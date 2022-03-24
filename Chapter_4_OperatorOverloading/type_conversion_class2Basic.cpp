@@ -22,12 +22,16 @@ public:
 	}
 };
 
+class Student{
+};
+class Meter{
+};
+class Feet{
+};
 int main()
 {
-
 	int hour = 2, mins = 20, duration;
 	Time tObj(hour, mins);
-
 	// Conversion OR duration = (int)t
 	duration = tObj;
 	cout << "Total Minutes are "<< duration << endl;
