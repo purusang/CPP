@@ -14,7 +14,10 @@ class Derived: public Base {
 public:
   // Derived uses x; y is passed along to Base.
   Derived(int x, int y): Base(y)
-     { j = x; cout << "Constructing Derived\n"; }
+     {
+         j = x;
+         cout << "Constructing Derived\n";
+     }
 
   ~Derived() { cout << "Destructing Derived\n"; }
   void show() { cout << i << " " << j << "\n"; }
