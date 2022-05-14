@@ -1,0 +1,8 @@
+I live in Nepal.
+My nationality is Nepalese.
+
+
+
+1 Ram Science 100 Math 20 Social 30
+1 Sham Science 67 Math 50 Social 20
+1 Hari Science 50 Math 34 Social 33
