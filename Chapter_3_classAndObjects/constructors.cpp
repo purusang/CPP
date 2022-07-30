@@ -12,7 +12,7 @@
 //
 //
 //        // Default Constructor
-//        Car())  // does not take any parameter.
+//        Car()  // does not take any parameter.
 //        {
 //            max_speed = 80;
 //            no_of_gears = 1;
@@ -94,8 +94,8 @@
 //    cout << "p3.x = " << p3.getX() << ", p3.y = " << p3.getY() << endl;
 //    return 0;
 //}
-//
-//
+
+
 
 
 
@@ -116,48 +116,48 @@
 
 
 // copy constructor 1
-//#include<iostream>
-//using namespace std;
-//
-//class Point
-//{
-//private:
-//    int x, y;
-//public:
-//    Point(){
-//        cout << "default constructor" << endl;
-//    }
-//    Point(int x1, int y1) { x = x1; y = y1;
-//        cout << " parameterized constructor" << endl;
-//    }
-//
-//    // Copy constructor
-//    Point(const Point &p1) {
-//        cout << " copy constructor called." <<endl;
-//     x = p1.x; y = p1.y; }
-//
-//    int getX()            {  return x; }
-//    int getY()            {  return y; }
-//    void setX(int x1){x = x1;}
-//    void setY(int y1){y = y1;}
-//};
-//
-//int main()
-//{
-//    Point p1(10, 15); // Normal constructor is called here
-//    Point p2 = p1; // Copy constructor is called here
-//    Point p3 = p1;
-//    Point p4, p5;
-//    p4 = p1;
-//
-//    // Let us access values assigned by constructors
-//    cout << "p1.x = " << p1.getX() << ", p1.y = " << p1.getY();
-//    cout << "\np2.x = " << p2.getX() << ", p2.y = " << p2.getY();
-//
-//    cout << "\np4.x = " << p4.getX() << ", p4.y = " << p4.getY();
-//
-//    return 0;
-//}
+#include<iostream>
+using namespace std;
+
+class Point
+{
+private:
+    int x, y;
+public:
+    Point(){
+        cout << "default constructor" << endl;
+    }
+    Point(int x1, int y1) { x = x1; y = y1;
+        cout << " parameterized constructor" << endl;
+    }
+
+    // Copy constructor
+    Point(const Point &p1) {
+        cout << " copy constructor called." <<endl;
+     x = p1.x; y = p1.y; }
+
+    int getX()            {  return x; }
+    int getY()            {  return y; }
+    void setX(int x1){x = x1;}
+    void setY(int y1){y = y1;}
+};
+
+int main()
+{
+    Point p1(10, 15); // Normal constructor is called here
+    Point p2 = p1; // Copy constructor is called here
+    Point p3 = p1;
+    Point p4, p5;
+    p4 = p1;
+
+    // Let us access values assigned by constructors
+    cout << "p1.x = " << p1.getX() << ", p1.y = " << p1.getY();
+    cout << "\np2.x = " << p2.getX() << ", p2.y = " << p2.getY();
+
+    cout << "\np4.x = " << p4.getX() << ", p4.y = " << p4.getY();
+
+    return 0;
+}
 
 
 
@@ -317,48 +317,48 @@
 
 
 ////Deep Copy
-#include <iostream>
-using namespace std;
-class Demo
-{
-    public:
-    int a;
-    int b;
-    int *p;
-
-    Demo()
-    {
-        p=new int;
-    }
-    Demo(Demo &d)
-    {
-        a = d.a;
-        b = d.b;
-        p = new int;  // 4 byte memory alloc
-        // p holds address of newly created
-        // memory
-        *p = *(d.p); //  * ( d. p )
-    }
-    void setdata(int x,int y,int z)
-    {
-        a=x;
-        b=y;
-        *p=z;
-    }
-    void showdata()
-    {
-        std::cout << "value of a is : " <<a<< std::endl;
-        std::cout << "value of b is : " <<b<< std::endl;
-        std::cout << "value of *p is : " <<*p<< std::endl;
-    }
-};
-int main()
-{
-  Demo d1;
-  d1.setdata(4,5,7);
-  Demo d2 = d1;  // cc
-  d2.showdata();
-  d2.setdata(444,444,777);
-  d1.showdata();
-  return 0;
-}
+//#include <iostream>
+//using namespace std;
+//class Demo
+//{
+//    public:
+//    int a;
+//    int b;
+//    int *p;
+//
+//    Demo()
+//    {
+//        p=new int;
+//    }
+//    Demo(Demo &d)
+//    {
+//        a = d.a;
+//        b = d.b;
+//        p = new int;  // 4 byte memory alloc
+//        // p holds address of newly created
+//        // memory
+//        *p = *(d.p); //  * ( d. p )
+//    }
+//    void setdata(int x,int y,int z)
+//    {
+//        a=x;
+//        b=y;
+//        *p=z;
+//    }
+//    void showdata()
+//    {
+//        std::cout << "value of a is : " <<a<< std::endl;
+//        std::cout << "value of b is : " <<b<< std::endl;
+//        std::cout << "value of *p is : " <<*p<< std::endl;
+//    }
+//};
+//int main()
+//{
+//  Demo d1;
+//  d1.setdata(4,5,7);
+//  Demo d2 = d1;  // cc
+//  d2.showdata();
+//  d2.setdata(444,444,777);
+//  d1.showdata();
+//  return 0;
+//}
